@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    SpottinGames Forum
                 </div>
 
                 <div class="links">
