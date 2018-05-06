@@ -16,6 +16,20 @@ Route::get('/', [
     'uses' => 'PagesController@home'
 ]);
 
+Route::group(['prefix' => 'auth'], function(){
+
+		Route::get('register', [
+			'as' => 'get_register',
+			'uses' => 'Auth\AuthController@getRegister'
+		]);
+
+		Route::post('register', [
+			'as' => 'post_register',
+			'uses' => 'Auth\AuthController@postRegister'
+		]);
+
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

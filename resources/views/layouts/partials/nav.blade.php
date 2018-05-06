@@ -21,8 +21,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Log in</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+          <li>
+            <a class="nav-link" href={{ URL::route('get_register')}}>Register</a>
           </li>
         </ul>
           <!--  
