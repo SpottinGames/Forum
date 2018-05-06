@@ -5,7 +5,7 @@
 
         @include('layouts.partials.nav')
 
-<form class="form-signin" action="http://localhost/codehub/public/register" method="POST">
+<form class="form-signin" action="http://localhost/Forum/public/register" method="POST">
 
           {!! Form::label('name', 'Full Name') !!}
           {!! Form::text('name', null, ['id' => 'name', 'class' => 'form-control', 'placeholder' => 'Full Name', 'required']) !!}
