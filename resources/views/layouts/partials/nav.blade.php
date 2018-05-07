@@ -19,13 +19,13 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
-            <a class="nav-link" href="#">Log in</a>
+            <a class="nav-link" href="{{ route('login') }}">Log in</a>
           </li>
           <li>
             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
           </li>
         </ul>
-          <!--  
+          <!--
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           -->

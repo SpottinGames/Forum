@@ -1,5 +1,5 @@
 
-@extends('layouts.masters.main')
+@extends('layouts.main')
 
 @section('page-content')
 @include('layouts.partials.nav')
