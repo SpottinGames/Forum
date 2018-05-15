@@ -1,5 +1,5 @@
 
-@extends('layouts.main')
+@extends('layouts.masters.main')
 
 @section('page-content')
 @include('layouts.partials.nav')
@@ -12,4 +12,4 @@
       </div>
     </main>
 
-@stop
+@endsection
