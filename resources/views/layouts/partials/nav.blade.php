@@ -21,6 +21,15 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Log in') }}</a>
           </li>
+
+          {{ $user = Auth::user() }}
+
+          @if($user)
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ $user['name'] }}</a>
+          </li>
+          @endif
+
           <li>
             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
           </li>
