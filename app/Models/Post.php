@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Post extends Model
 {
 
     /**
@@ -12,14 +12,14 @@ class Category extends Model
      *
      * @var array
      */
-    protected $table = 'categories';
+    protected $table = 'posts';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name',];
+    protected $fillable = ['category_id', 'title', 'body'];
 
     /**
      * The attributes that should be hidden for arrays.

@@ -19,11 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+ 
  Route::group(['prefix' => 'question'], function(){
 
  		Route::get('post', ['as' => 'get_post', 'uses' => 'ForumController@getPost']);
 
- 	//	Route::get('post', ['as' => 'post_question', 'uses' => 'ForumController@postQuestion']);
+ 		Route::post('post', ['as' => 'post_question', 'uses' => 'ForumController@postQuestion']);
 
 });

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Post;
+
 
 class ForumController extends Controller
 {
@@ -21,5 +23,19 @@ class ForumController extends Controller
     		$categories = Category::all();
 
     		return view('pages.question', compact('categories'));
+    }
+
+    public function postQuestion(Request $request)
+    {
+       // dd($request['title']);
+        $post = new Post();
+
+        $post->category_id = $request['category'];
+        $post->title = $request['title'];
+        $post->body = $request['body'];
+// Inserting
+        $post->save();
+
+        return redirect()->back('/');
     }
 }

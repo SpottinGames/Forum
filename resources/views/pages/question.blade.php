@@ -16,11 +16,12 @@
                         {{ Form::text('title', null, ['id'=> 'title', 'class' => 'form-control', 'placeholder' => 'title', 'required']) }}
                     <br/>
                         {{ Form::label('category', 'Category') }}
-                    <select class="form-control">
-                        <option>Nintendo Switch</option>
-                        <option>PlayStation 4</option>
-                        <option>XBOX One</option>
-                        <option>PC</option>
+                    <select name="category" class="form-control">
+
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                           <!-- <option>PlayStation 4</option> -->
                     </select>
                     <br/>
                         {{ Form::label('body', 'Body') }}
@@ -31,9 +32,6 @@
                         {{ Form::close() }}
 
                 </div>
-
-
-
 
                     </form>
                 </div>
