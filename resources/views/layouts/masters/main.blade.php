@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="asset('css/style.css') url('css/style.css')" type="text/css" rel="stylesheet" >
 
   </head>
 

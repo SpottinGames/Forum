@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Http\Requests\CreatePostRequest;
 
 
 class ForumController extends Controller
@@ -25,7 +26,7 @@ class ForumController extends Controller
     		return view('pages.question', compact('categories'));
     }
 
-    public function postQuestion(Request $request)
+    public function postQuestion(CreatePostRequest $request)
     {
        // dd($request['title']);
         $post = new Post();
@@ -36,6 +37,7 @@ class ForumController extends Controller
 // Inserting
         $post->save();
 
-        return back()->withInput();
+        return redirect('/question/post');
+//      return back()->withInput();
     }
 }
