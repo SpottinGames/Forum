@@ -36,6 +36,6 @@ class ForumController extends Controller
 // Inserting
         $post->save();
 
-        return redirect()->back('/');
+        return back()->withInput();
     }
 }

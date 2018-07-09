@@ -13,7 +13,7 @@
 
                         <!-- Title new thread -->
                         {{ Form::label('title', 'Title') }}
-                        {{ Form::text('title', null, ['id'=> 'title', 'class' => 'form-control', 'placeholder' => 'title', 'required']) }}
+                        {{ Form::text('title', null, ['id'=> 'title', 'class' => 'form-control', 'placeholder' => 'Title', 'required']) }}
                     <br/>
                         {{ Form::label('category', 'Category') }}
                     <select name="category" class="form-control">
